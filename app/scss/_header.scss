@@ -1,0 +1,13 @@
+.header{
+    padding: 1rem 1.5rem;
+    &__logo{
+        img{
+            flex: 1;
+            width: 70%;
+        }
+    }
+
+    &__links{
+        gap: rem(10);
+    }
+}

@@ -1,0 +1,63 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    margin:0 ;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    font-family: $fonts-DM-sans;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+header{
+    background-color: $clr-header;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.flex{
+    display: flex;
+    
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: cen;
+    }
+}
