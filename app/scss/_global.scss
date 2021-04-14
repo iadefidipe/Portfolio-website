@@ -58,6 +58,19 @@ a, a:hover{
     }
 
     &-ai-c{
-        align-items: cen;
+        align-items: center;
+    }
+}
+
+/***********visibility ********/
+.hide-for-mobile{
+    @include breakpoint-down (medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up (large){
+        display: none;
     }
 }
