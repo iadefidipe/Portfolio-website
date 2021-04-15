@@ -1,0 +1,134 @@
+main{
+
+
+    
+    .hero{
+        padding: rem(50);
+        background: #181E2A ;
+        gap: rem(100);
+        
+        &__container{
+            width: 50%;
+
+
+            &__title{
+                span{
+                    display: block;
+                    color: cyan;
+                }
+            }
+
+            &__socials{
+                gap: rem(10);
+                i{
+                    color: cyan;
+                    font-size: rem(50);
+                }
+            }
+            
+        }
+
+        &__intro{
+            width: 50%;
+            padding: rem(25);
+            P{
+                font-size: rem(24);
+                color: white;
+                font-weight: 600;
+                line-height: rem(45);
+
+                >a{
+                    color: cyan;
+                }
+            }
+            }
+            
+    }
+    
+    .projects{
+        background-color: #1C2230;
+        display: grid;
+        place-items: center;
+        
+        .project{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(500px, 1fr));
+            grid-template-rows: repeat(2, minmax(200px, 500px));
+            column-gap: rem(20);
+            row-gap: rem(20);
+
+            &__1{
+                position: relative;
+                background-image: url(../images/project-2.jpg);
+                background-repeat: no-repeat;
+                background-size: 500px 400px;
+                width: 500px;
+                height: 400px;
+                // border: 2px solid;
+                // color: pink;
+            }
+
+            &__2{
+                position: relative;
+                background-image: url(../images/project-5.jpg);
+                background-repeat: no-repeat;
+                background-size: 500px 400px;
+                width: 500px;
+                height: 400px;
+                // border: 2px solid;
+                // color: pink;
+            }
+
+            &__3{
+                position: relative;
+                background-image: url(../images/project-4.jpg);
+                background-repeat: no-repeat;
+                background-size: 500px 400px;
+                width: 500px;
+                height: 400px;
+                // border: 2px solid;
+                // color: pink;
+            }
+
+            &__4{
+                position: relative;
+                background-image: url(../images/project-3.jpg);
+                background-repeat: no-repeat;
+                background-size: 500px 400px;
+                width: 500px;
+                height: 400px;
+                // border: 2px solid;
+                // color: pink;
+            }
+
+            &__1, &__2, &__3, &__4{
+                &:hover{
+
+                    opacity: 70%;
+                    transition: opacity 500ms ease-in-out;
+
+                    a{
+                        position: relative;
+                        background-color: cyan;
+                        padding: rem(15);
+                        border-radius: rem(30);
+                        top:350px;
+                        left: 250px;
+                        opacity: 100%;
+                        
+        
+                        &:hover{
+                            
+                        }
+        
+                    }
+
+                }
+            }
+
+            
+
+        }
+    }
+
+}

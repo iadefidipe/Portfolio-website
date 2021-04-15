@@ -18,7 +18,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'Rubik', sans-serif;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -42,6 +42,16 @@ img {
   display: block;
 }
 
+h1, h2 {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 4rem;
+}
+
+h3 {
+  color: cyan;
+}
+
 a, a:hover {
   text-decoration: none;
   color: white;
@@ -63,6 +73,12 @@ a, a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.flex-jc-e {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .flex-ai-c {
@@ -141,5 +157,116 @@ a, a:hover {
 
 .header__menu Span:not(:last-child) {
   margin-bottom: 0.3125rem;
+}
+
+main .hero {
+  padding: 3.125rem;
+  background: #181E2A;
+  gap: 6.25rem;
+}
+
+main .hero__container {
+  width: 50%;
+}
+
+main .hero__container__title span {
+  display: block;
+  color: cyan;
+}
+
+main .hero__container__socials {
+  gap: 0.625rem;
+}
+
+main .hero__container__socials i {
+  color: cyan;
+  font-size: 3.125rem;
+}
+
+main .hero__intro {
+  width: 50%;
+  padding: 1.5625rem;
+}
+
+main .hero__intro P {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  line-height: 2.8125rem;
+}
+
+main .hero__intro P > a {
+  color: cyan;
+}
+
+main .projects {
+  background-color: #1C2230;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .projects .project {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(500px, 1fr));
+  -ms-grid-rows: (minmax(200px, 500px))[2];
+      grid-template-rows: repeat(2, minmax(200px, 500px));
+  -webkit-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  row-gap: 1.25rem;
+}
+
+main .projects .project__1 {
+  position: relative;
+  background-image: url(../images/project-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  width: 500px;
+  height: 400px;
+}
+
+main .projects .project__2 {
+  position: relative;
+  background-image: url(../images/project-5.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  width: 500px;
+  height: 400px;
+}
+
+main .projects .project__3 {
+  position: relative;
+  background-image: url(../images/project-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  width: 500px;
+  height: 400px;
+}
+
+main .projects .project__4 {
+  position: relative;
+  background-image: url(../images/project-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  width: 500px;
+  height: 400px;
+}
+
+main .projects .project__1:hover, main .projects .project__2:hover, main .projects .project__3:hover, main .projects .project__4:hover {
+  opacity: 70%;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+main .projects .project__1:hover a, main .projects .project__2:hover a, main .projects .project__3:hover a, main .projects .project__4:hover a {
+  position: relative;
+  background-color: cyan;
+  padding: 0.9375rem;
+  border-radius: 1.875rem;
+  top: 350px;
+  left: 250px;
+  opacity: 100%;
 }
 /*# sourceMappingURL=style.css.map */

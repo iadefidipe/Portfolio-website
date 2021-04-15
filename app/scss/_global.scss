@@ -16,7 +16,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    font-family: $fonts-DM-sans;
+    font-family: 'Rubik', sans-serif;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -41,10 +41,22 @@ img{
     display: block;
 }
 
+h1,h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: rem(64);
+}
+h3{
+    color: cyan;
+}
+
+
 a, a:hover{
     text-decoration: none;
     color: white;
 }
+
+
 
 .flex{
     display: flex;
@@ -55,6 +67,10 @@ a, a:hover{
 
     &-jc-c{
         justify-content: center;
+    }
+
+    &-jc-e{
+        justify-content: space-evenly;
     }
 
     &-ai-c{
