@@ -19,7 +19,7 @@ main{
             }
 
             &__socials{
-                gap: rem(10);
+                gap: rem(30);
                 i{
                     color: cyan;
                     font-size: rem(50);
@@ -115,12 +115,6 @@ main{
                         top:350px;
                         left: 250px;
                         opacity: 100%;
-                        
-        
-                        &:hover{
-                            
-                        }
-        
                     }
 
                 }
@@ -131,4 +125,47 @@ main{
         }
     }
 
+    .skills{
+        background-color: #181E2A;
+        display: grid;
+        place-items: center;
+
+        h2{
+            span{
+                display: block;
+                background-color: cyan;
+                height: 5px;
+                width: 100px;
+            }
+        }
+
+        .skill{
+            margin-top: rem(30);
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(4, 100px );
+            gap:rem(20);
+
+            &__card{
+                display: grid;
+                place-items: center;
+                border: 2px solid cyan;
+                border-radius: rem(20);
+
+                i{
+                    color: cyan;
+                    font-size: rem(30);
+                }
+                &:hover{
+                    background-color: #1C2230;
+                }
+
+            }
+
+
+
+        }
+    }
+
 }
+

@@ -175,7 +175,7 @@ main .hero__container__title span {
 }
 
 main .hero__container__socials {
-  gap: 0.625rem;
+  gap: 1.875rem;
 }
 
 main .hero__container__socials i {
@@ -268,5 +268,47 @@ main .projects .project__1:hover a, main .projects .project__2:hover a, main .pr
   top: 350px;
   left: 250px;
   opacity: 100%;
+}
+
+main .skills {
+  background-color: #181E2A;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .skills h2 span {
+  display: block;
+  background-color: cyan;
+  height: 5px;
+  width: 100px;
+}
+
+main .skills .skill {
+  margin-top: 1.875rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[4];
+      grid-template-columns: repeat(4, 200px);
+  -ms-grid-rows: (100px)[4];
+      grid-template-rows: repeat(4, 100px);
+  gap: 1.25rem;
+}
+
+main .skills .skill__card {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: 2px solid cyan;
+  border-radius: 1.25rem;
+}
+
+main .skills .skill__card i {
+  color: cyan;
+  font-size: 1.875rem;
+}
+
+main .skills .skill__card:hover {
+  background-color: #1C2230;
 }
 /*# sourceMappingURL=style.css.map */
