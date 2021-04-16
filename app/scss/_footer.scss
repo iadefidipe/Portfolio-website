@@ -1,0 +1,27 @@
+.footer{
+    margin-top: rem(-100);
+    display: grid;
+    place-items: center;
+    gap: rem(20);
+    padding: rem(50);
+    background:#1C2230;
+    text-align: center;
+    h4{
+        width: 40%;
+        color: white;
+        font-size: rem(24);
+    }
+
+    p{
+        font-size: rem(18);
+        color: white;
+        font-weight: 500;
+    }
+
+    a{
+        color: cyan;
+        text-decoration: underline;
+    }
+
+
+}

@@ -42,10 +42,17 @@ img {
   display: block;
 }
 
-h1, h2 {
+h1 {
   color: white;
   font-family: 'Rubik', sans-serif;
   font-size: 4rem;
+  font-weight: 900;
+}
+
+h2 {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 3.25rem;
 }
 
 h3 {
@@ -165,11 +172,8 @@ main .hero {
   gap: 6.25rem;
 }
 
-main .hero__container {
-  width: 50%;
-}
-
 main .hero__container__title span {
+  margin-top: -0.625rem;
   display: block;
   color: cyan;
 }
@@ -184,7 +188,6 @@ main .hero__container__socials i {
 }
 
 main .hero__intro {
-  width: 50%;
   padding: 1.5625rem;
 }
 
@@ -199,75 +202,124 @@ main .hero__intro P > a {
   color: cyan;
 }
 
+@media (max-width: 850px) {
+  main .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 3.125rem;
+  }
+  main .hero__container__title h1 {
+    font-size: 3rem;
+  }
+  main .hero__container__socials {
+    gap: 1.875rem;
+  }
+  main .hero__container__socials i {
+    font-size: 1.875rem;
+  }
+  main .hero__intro {
+    padding: 0;
+  }
+  main .hero__intro P {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 600;
+    line-height: 2.1875rem;
+  }
+  main .hero__intro P > a {
+    color: cyan;
+  }
+}
+
 main .projects {
   background-color: #1C2230;
   display: -ms-grid;
   display: grid;
   place-items: center;
+  padding: 1.25rem;
+}
+
+main .projects h2 span {
+  display: block;
+  background-color: cyan;
+  height: 5px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .projects .project {
+  margin-top: 3.125rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(500px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(500px, 1fr));
-  -ms-grid-rows: (minmax(200px, 500px))[2];
-      grid-template-rows: repeat(2, minmax(200px, 500px));
+  -ms-grid-columns: (minmax(100px, 500px))[2];
+      grid-template-columns: repeat(2, minmax(100px, 500px));
+  -ms-grid-rows: (minmax(100px, 350px))[2];
+      grid-template-rows: repeat(2, minmax(100px, 350px));
   -webkit-column-gap: 1.25rem;
           column-gap: 1.25rem;
-  row-gap: 1.25rem;
 }
 
-main .projects .project__1 {
+main .projects .project__card {
   position: relative;
-  background-image: url(../images/project-2.jpg);
   background-repeat: no-repeat;
-  background-size: 500px 400px;
+  background-size: 500px 300px;
   width: 500px;
-  height: 400px;
+  height: 300px;
 }
 
-main .projects .project__2 {
-  position: relative;
-  background-image: url(../images/project-5.jpg);
-  background-repeat: no-repeat;
-  background-size: 500px 400px;
-  width: 500px;
-  height: 400px;
-}
-
-main .projects .project__3 {
-  position: relative;
-  background-image: url(../images/project-4.jpg);
-  background-repeat: no-repeat;
-  background-size: 500px 400px;
-  width: 500px;
-  height: 400px;
-}
-
-main .projects .project__4 {
-  position: relative;
-  background-image: url(../images/project-3.jpg);
-  background-repeat: no-repeat;
-  background-size: 500px 400px;
-  width: 500px;
-  height: 400px;
-}
-
-main .projects .project__1:hover, main .projects .project__2:hover, main .projects .project__3:hover, main .projects .project__4:hover {
+main .projects .project__card:hover {
   opacity: 70%;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
 }
 
-main .projects .project__1:hover a, main .projects .project__2:hover a, main .projects .project__3:hover a, main .projects .project__4:hover a {
+main .projects .project__card:hover a {
+  margin-left: 0.625rem;
   position: relative;
   background-color: cyan;
   padding: 0.9375rem;
   border-radius: 1.875rem;
-  top: 350px;
-  left: 250px;
+  top: 250px;
+  left: 200px;
   opacity: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+main .projects .project__card:hover a span {
+  margin-left: 0.3125rem;
+}
+
+main .projects .project__1 {
+  background-image: url(../images/project-2.jpg);
+}
+
+main .projects .project__2 {
+  background-image: url(../images/project-5.jpg);
+}
+
+main .projects .project__3 {
+  background-image: url(../images/project-4.jpg);
+}
+
+main .projects .project__4 {
+  position: relative;
+  background-image: url(../images/project-3.jpg);
+}
+
+@media (max-width: 1048px) {
+  main .projects .project .project {
+    -ms-grid-columns: (minmax(100px, 500px))[1];
+        grid-template-columns: repeat(1, minmax(100px, 500px));
+    -ms-grid-rows: (minmax(100px, 350px))[4];
+        grid-template-rows: repeat(4, minmax(100px, 350px));
+  }
 }
 
 main .skills {
@@ -277,11 +329,17 @@ main .skills {
   place-items: center;
 }
 
+main .skills h2 {
+  margin-top: 1.875rem;
+}
+
 main .skills h2 span {
   display: block;
   background-color: cyan;
   height: 5px;
   width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .skills .skill {
@@ -310,5 +368,33 @@ main .skills .skill__card i {
 
 main .skills .skill__card:hover {
   background-color: #1C2230;
+}
+
+.footer {
+  margin-top: -6.25rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 1.25rem;
+  padding: 3.125rem;
+  background: #1C2230;
+  text-align: center;
+}
+
+.footer h4 {
+  width: 40%;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer p {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 500;
+}
+
+.footer a {
+  color: cyan;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

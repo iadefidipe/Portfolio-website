@@ -41,10 +41,17 @@ img{
     display: block;
 }
 
-h1,h2{
+h1{
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: rem(64);
+    font-weight: 900;
+}
+
+h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: rem(52);
 }
 h3{
     color: cyan;
