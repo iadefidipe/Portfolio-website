@@ -105,14 +105,27 @@ main{
             grid-template-columns: repeat(2, minmax(100px, 500px));
             grid-template-rows: repeat(2, minmax(100px, 350px));
             column-gap: rem(20);
+
+            @media (max-width:1048px){
+                place-items: center;
+                
+                    grid-template-columns: repeat(1,minmax(rem(50), rem(500)));
+                    grid-template-rows: repeat(4, minmax(rem(100), rem(350)));
+            
+            }
             
 
             &__card{
                 position: relative;
                 background-repeat: no-repeat;
-                background-size: 500px 300px;
-                width: 500px;
-                height: 300px;
+                background-size: rem(500) rem(300);
+                width: rem(500);
+                height: rem(300);
+                @media (max-width:544px){
+                background-size: rem(300) rem(300);
+                width: rem(300);
+                height: rem(300);
+            }
 
                 &:hover{
 
@@ -160,12 +173,7 @@ main{
                 background-image: url(../images/project-3.jpg);
             }
 
-            @media (max-width:1048px){
-                .project{
-                    grid-template-columns: repeat(1,minmax(100px, 500px));
-                    grid-template-rows: repeat(4, minmax(100px, 350px));
-                }
-            }
+            
 
         }
     }
