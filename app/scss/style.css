@@ -362,12 +362,24 @@ main .skills .skill {
   gap: 1.25rem;
 }
 
+@media (max-width: 1048px) {
+  main .skills .skill {
+    place-items: center;
+    -ms-grid-columns: (200px)[2];
+        grid-template-columns: repeat(2, 200px);
+    -ms-grid-rows: (100px)[6];
+        grid-template-rows: repeat(6, 100px);
+  }
+}
+
 main .skills .skill__card {
   display: -ms-grid;
   display: grid;
   place-items: center;
   border: 2px solid cyan;
   border-radius: 1.25rem;
+  width: 200px;
+  height: 100px;
 }
 
 main .skills .skill__card i {
