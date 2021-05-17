@@ -10,6 +10,14 @@
         width: 40%;
         color: white;
         font-size: rem(24);
+
+        @media (max-width:1070px){
+            width: 60%;
+        }
+
+        @media (max-width:950px){
+            width: 80%;
+        }
     }
 
     p{

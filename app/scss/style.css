@@ -413,6 +413,18 @@ main .skills .skill__card i {
   font-size: 1.5rem;
 }
 
+@media (max-width: 1070px) {
+  .footer h4 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 950px) {
+  .footer h4 {
+    width: 80%;
+  }
+}
+
 .footer p {
   font-size: 1.125rem;
   color: white;
