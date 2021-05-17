@@ -39,6 +39,9 @@ main{
 
                 >a{
                     color: cyan;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -113,6 +116,10 @@ main{
                     grid-template-rows: repeat(4, minmax(rem(100), rem(350)));
             
             }
+
+            a{
+                display:none;
+            }
             
 
             &__card{
@@ -127,22 +134,23 @@ main{
                 height: rem(300);
             }
 
-                &:hover{
+            &:hover{
 
-                    opacity: 70%;
-                    transition: opacity 500ms ease-in-out;
+                opacity: 70%;
+                transition: opacity 500ms ease-in-out;
 
-                    a{
-                        margin-left: rem(10);
-                        position: relative;
-                        background-color: cyan;
-                        padding: rem(15);
-                        border-radius: rem(30);
-                        top:250px;
-                        left: 200px;
-                        opacity: 100%;
-                        font-weight: 600;
-                        text-transform: uppercase;
+                a{
+                    display: inline;
+                    margin-left: rem(10);
+                    position: relative;
+                    background-color: cyan;
+                    padding: rem(15);
+                    border-radius: rem(30);
+                    top:250px;
+                    left: 200px;
+                    opacity: 100%;
+                    font-weight: 600;
+                    text-transform: uppercase;
 
                         span{
                             margin-left: rem(5);
@@ -223,10 +231,7 @@ main{
                     color: cyan;
                     font-size: rem(30);
                 }
-                &:hover{
-                    background-color: #1C2230;
-                }
-
+               
 
 
             }

@@ -202,6 +202,10 @@ main .hero__intro P > a {
   color: cyan;
 }
 
+main .hero__intro P > a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 850px) {
   main .hero {
     -webkit-box-orient: vertical;
@@ -275,6 +279,10 @@ main .projects .project {
   }
 }
 
+main .projects .project a {
+  display: none;
+}
+
 main .projects .project__card {
   position: relative;
   background-repeat: no-repeat;
@@ -298,6 +306,7 @@ main .projects .project__card:hover {
 }
 
 main .projects .project__card:hover a {
+  display: inline;
   margin-left: 0.625rem;
   position: relative;
   background-color: cyan;
@@ -387,10 +396,6 @@ main .skills .skill__card i {
   font-size: 1.875rem;
 }
 
-main .skills .skill__card:hover {
-  background-color: #1C2230;
-}
-
 .footer {
   margin-top: -6.25rem;
   display: -ms-grid;
@@ -416,6 +421,9 @@ main .skills .skill__card:hover {
 
 .footer a {
   color: cyan;
+}
+
+.footer a:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
