@@ -1,16 +1,69 @@
 html {
   font-size: 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-*, *::before, *::after {
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
 }
 
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"], li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -261,9 +314,9 @@ main .projects .project {
   margin-top: 3.125rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 500px))[2];
+  -ms-grid-columns: (minmax(100px, 500px));
       grid-template-columns: repeat(2, minmax(100px, 500px));
-  -ms-grid-rows: (minmax(100px, 350px))[2];
+  -ms-grid-rows: (minmax(100px, 350px));
       grid-template-rows: repeat(2, minmax(100px, 350px));
   -webkit-column-gap: 1.25rem;
           column-gap: 1.25rem;
@@ -272,9 +325,9 @@ main .projects .project {
 @media (max-width: 1048px) {
   main .projects .project {
     place-items: center;
-    -ms-grid-columns: (minmax(3.125rem, 31.25rem))[1];
+    -ms-grid-columns: (minmax(3.125rem, 31.25rem));
         grid-template-columns: repeat(1, minmax(3.125rem, 31.25rem));
-    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
+    -ms-grid-rows: (minmax(6.25rem, 21.875rem));
         grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
   }
 }
@@ -299,28 +352,110 @@ main .projects .project__card {
   }
 }
 
-main .projects .project__card:hover {
-  opacity: 70%;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+main .projects .project__card-overlay {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 18.75rem;
+  gap: 1.875rem;
 }
 
-main .projects .project__card:hover a {
+main .projects .project__card-overlay:hover {
+  background: rgba(22, 22, 22, 0.344);
+  -webkit-animation: overlay 1s ease-in 0s normal forwards;
+          animation: overlay 1s ease-in 0s normal forwards;
+}
+
+main .projects .project__card-overlay:hover h4 {
+  display: block;
+}
+
+main .projects .project__card-overlay:hover .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .projects .project__card-overlay:hover a {
   display: inline;
+}
+
+main .projects .project__card-overlay h4 {
+  display: none;
+  font-size: 2.25rem;
+  color: cyan;
+}
+
+main .projects .project__card-overlay .tools {
+  display: none;
+  gap: 1.25rem;
+}
+
+main .projects .project__card-overlay .tools i {
+  font-size: 2.1875rem;
+  color: cyan;
+}
+
+main .projects .project__card-overlay .links {
+  display: none;
+}
+
+@-webkit-keyframes overlay {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes overlay {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main .projects .project__card-overlay a {
+  display: none;
   margin-left: 0.625rem;
   position: relative;
-  background-color: cyan;
+  border: 1px solid cyan;
+  color: cyan;
   padding: 0.9375rem;
   border-radius: 1.875rem;
-  top: 250px;
-  left: 200px;
-  opacity: 100%;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-main .projects .project__card:hover a span {
+main .projects .project__card-overlay a span {
   margin-left: 0.3125rem;
+}
+
+main .projects .project__card-overlay a:hover {
+  background: cyan;
+  color: white;
 }
 
 main .projects .project__1 {
@@ -364,9 +499,9 @@ main .skills .skill {
   margin-top: 1.875rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (200px)[4];
+  -ms-grid-columns: (200px);
       grid-template-columns: repeat(4, 200px);
-  -ms-grid-rows: (100px)[4];
+  -ms-grid-rows: (100px);
       grid-template-rows: repeat(4, 100px);
   gap: 1.25rem;
 }
@@ -374,9 +509,9 @@ main .skills .skill {
 @media (max-width: 1048px) {
   main .skills .skill {
     place-items: center;
-    -ms-grid-columns: (200px)[2];
+    -ms-grid-columns: (200px);
         grid-template-columns: repeat(2, 200px);
-    -ms-grid-rows: (100px)[6];
+    -ms-grid-rows: (100px);
         grid-template-rows: repeat(6, 100px);
   }
 }

@@ -129,35 +129,104 @@ main{
                 width: rem(500);
                 height: rem(300);
                 @media (max-width:544px){
-                background-size: rem(300) rem(300);
-                width: rem(300);
-                height: rem(300);
-            }
+                    background-size: rem(300) rem(300);
+                    width: rem(300);
+                    height: rem(300);
+                }
 
-            &:hover{
+                &-overlay{
+                    
+                    flex-direction: column;
+                    height:rem(300);
+                    gap: rem(30);
 
-                opacity: 70%;
-                transition: opacity 500ms ease-in-out;
 
-                a{
-                    display: inline;
-                    margin-left: rem(10);
-                    position: relative;
-                    background-color: cyan;
-                    padding: rem(15);
-                    border-radius: rem(30);
-                    top:250px;
-                    left: 200px;
-                    opacity: 100%;
-                    font-weight: 600;
-                    text-transform: uppercase;
+                    &:hover{
 
-                        span{
-                            margin-left: rem(5);
-                        }
+                            background:rgba(22, 22, 22, 0.344);
+                            animation: overlay 1s ease-in 0s normal forwards;
+                            
+                            h4{
+                                display: block;
+                            }
+
+                            .tools{
+                                display: flex;
+                            }
+
+                            a{
+                                display: inline;
+                            }
                     }
 
+                    h4{
+                        display:none;
+                        font-size: rem(36);
+                        color: cyan;
+                    }
+
+                    .tools{
+                        display:none;
+                        gap: rem(20);
+                         i{
+                             font-size: rem(35);
+                             color: cyan;
+                         }
+                    }
+
+                    .links{
+                        display: none;
+                    }
+
+                    
+
+                        @keyframes overlay{
+                            0%{
+                                transform: translateX(100%);
+                                opacity: 0;
+                            }
+                            50%{
+                                transform: translateX(100%); 
+                                opacity: 0.5;
+                            }
+                            100%{
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        a{
+                        
+                            display: none;
+                            margin-left: rem(10);
+                            position: relative;
+                            border: 1px solid cyan;
+                            color: cyan;
+                            padding: rem(15);
+                            border-radius: rem(30);
+                            // top:250px;
+                            // left: 200px;
+                            // opacity: 100%;
+                            font-weight: 600;
+                            text-transform: uppercase;
+
+                            span{
+                                margin-left: rem(5);
+                            }
+                            &:hover{
+                                background: cyan;
+                                color: white;
+                            }
+                        }
+
+
+                        
+
+                        
                 }
+
+
+
 
             }
 
