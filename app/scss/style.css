@@ -314,9 +314,9 @@ main .projects .project {
   margin-top: 3.125rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 500px));
+  -ms-grid-columns: (minmax(100px, 500px))[2];
       grid-template-columns: repeat(2, minmax(100px, 500px));
-  -ms-grid-rows: (minmax(100px, 350px));
+  -ms-grid-rows: (minmax(100px, 350px))[2];
       grid-template-rows: repeat(2, minmax(100px, 350px));
   -webkit-column-gap: 1.25rem;
           column-gap: 1.25rem;
@@ -325,9 +325,9 @@ main .projects .project {
 @media (max-width: 1048px) {
   main .projects .project {
     place-items: center;
-    -ms-grid-columns: (minmax(3.125rem, 31.25rem));
+    -ms-grid-columns: (minmax(3.125rem, 31.25rem))[1];
         grid-template-columns: repeat(1, minmax(3.125rem, 31.25rem));
-    -ms-grid-rows: (minmax(6.25rem, 21.875rem));
+    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
         grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
   }
 }
@@ -359,82 +359,21 @@ main .projects .project__card-overlay {
           flex-direction: column;
   height: 18.75rem;
   gap: 1.875rem;
-}
-
-main .projects .project__card-overlay:hover {
-  background: rgba(22, 22, 22, 0.344);
-  -webkit-animation: overlay 1s ease-in 0s normal forwards;
-          animation: overlay 1s ease-in 0s normal forwards;
-}
-
-main .projects .project__card-overlay:hover h4 {
-  display: block;
-}
-
-main .projects .project__card-overlay:hover .tools {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .projects .project__card-overlay:hover a {
-  display: inline;
+  opacity: 0;
 }
 
 main .projects .project__card-overlay h4 {
-  display: none;
   font-size: 2.25rem;
   color: cyan;
 }
 
 main .projects .project__card-overlay .tools {
-  display: none;
   gap: 1.25rem;
 }
 
 main .projects .project__card-overlay .tools i {
   font-size: 2.1875rem;
   color: cyan;
-}
-
-main .projects .project__card-overlay .links {
-  display: none;
-}
-
-@-webkit-keyframes overlay {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0.5;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes overlay {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0.5;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 main .projects .project__card-overlay a {
@@ -456,6 +395,17 @@ main .projects .project__card-overlay a span {
 main .projects .project__card-overlay a:hover {
   background: cyan;
   color: white;
+}
+
+main .projects .project__card-overlay:hover {
+  background: rgba(22, 22, 22, 0.344);
+  opacity: 1;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+main .projects .project__card-overlay:hover a {
+  display: inline;
 }
 
 main .projects .project__1 {
@@ -499,9 +449,9 @@ main .skills .skill {
   margin-top: 1.875rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (200px);
+  -ms-grid-columns: (200px)[4];
       grid-template-columns: repeat(4, 200px);
-  -ms-grid-rows: (100px);
+  -ms-grid-rows: (100px)[4];
       grid-template-rows: repeat(4, 100px);
   gap: 1.25rem;
 }
@@ -509,9 +459,9 @@ main .skills .skill {
 @media (max-width: 1048px) {
   main .skills .skill {
     place-items: center;
-    -ms-grid-columns: (200px);
+    -ms-grid-columns: (200px)[2];
         grid-template-columns: repeat(2, 200px);
-    -ms-grid-rows: (100px);
+    -ms-grid-rows: (100px)[6];
         grid-template-rows: repeat(6, 100px);
   }
 }

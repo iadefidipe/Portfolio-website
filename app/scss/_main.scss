@@ -139,34 +139,16 @@ main{
                     flex-direction: column;
                     height:rem(300);
                     gap: rem(30);
-
-
-                    &:hover{
-
-                            background:rgba(22, 22, 22, 0.344);
-                            animation: overlay 1s ease-in 0s normal forwards;
-                            
-                            h4{
-                                display: block;
-                            }
-
-                            .tools{
-                                display: flex;
-                            }
-
-                            a{
-                                display: inline;
-                            }
-                    }
+                    opacity: 0;
 
                     h4{
-                        display:none;
+                        
                         font-size: rem(36);
                         color: cyan;
                     }
 
                     .tools{
-                        display:none;
+        
                         gap: rem(20);
                          i{
                              font-size: rem(35);
@@ -174,29 +156,8 @@ main{
                          }
                     }
 
-                    .links{
-                        display: none;
-                    }
 
-                    
-
-                        @keyframes overlay{
-                            0%{
-                                transform: translateX(100%);
-                                opacity: 0;
-                            }
-                            50%{
-                                transform: translateX(100%); 
-                                opacity: 0.5;
-                            }
-                            100%{
-                                transform: translateX(0);
-                                opacity: 1;
-                            }
-                        }
-
-                        a{
-                        
+                    a{
                             display: none;
                             margin-left: rem(10);
                             position: relative;
@@ -204,9 +165,6 @@ main{
                             color: cyan;
                             padding: rem(15);
                             border-radius: rem(30);
-                            // top:250px;
-                            // left: 200px;
-                            // opacity: 100%;
                             font-weight: 600;
                             text-transform: uppercase;
 
@@ -217,16 +175,24 @@ main{
                                 background: cyan;
                                 color: white;
                             }
-                        }
+                    } 
 
 
-                        
+                    &:hover{
 
-                        
+                            background:rgba(22, 22, 22, 0.344);
+                            // animation: overlay 1s ease-in ;
+                            opacity: 1;
+                            transition: all 500ms ease-in-out;
+
+                            a{
+                                display: inline;
+                            }
+                    }
+
+
+
                 }
-
-
-
 
             }
 
