@@ -1,3 +1,11 @@
+// ===============  take in pixels, spit out rem value (just for fun)
+
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+
+
 main{
 
 
@@ -20,10 +28,16 @@ main{
             }
 
             &__socials{
+                margin-top: rem(30);
                 gap: rem(30);
                 i{
-                    color: cyan;
+                    color: white;
                     font-size: rem(50);
+
+                    &:hover{
+                        color: cyan;
+                        transition: color 500ms ease-in-out;
+                    }
                 }
             }
             
@@ -266,12 +280,8 @@ main{
                     color: cyan;
                     font-size: rem(30);
                 }
-               
-
 
             }
-
-
 
         }
     }

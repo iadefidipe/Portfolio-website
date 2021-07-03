@@ -97,14 +97,13 @@ img {
 
 h1 {
   color: white;
-  font-family: 'Rubik', sans-serif;
   font-size: 4rem;
   font-weight: 900;
+  letter-spacing: 0.625rem;
 }
 
 h2 {
   color: white;
-  font-family: 'Rubik', sans-serif;
   font-size: 3.25rem;
 }
 
@@ -158,6 +157,19 @@ a, a:hover {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.section {
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
 }
 
 .header {
@@ -219,6 +231,18 @@ a, a:hover {
   margin-bottom: 0.3125rem;
 }
 
+.sticky {
+  position: fixed;
+  background: #1c2230c6;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+}
+
 main .hero {
   padding: 3.125rem;
   background: #181E2A;
@@ -232,12 +256,19 @@ main .hero__container__title span {
 }
 
 main .hero__container__socials {
+  margin-top: 1.875rem;
   gap: 1.875rem;
 }
 
 main .hero__container__socials i {
-  color: cyan;
+  color: white;
   font-size: 3.125rem;
+}
+
+main .hero__container__socials i:hover {
+  color: cyan;
+  -webkit-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
 }
 
 main .hero__intro {

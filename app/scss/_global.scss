@@ -34,14 +34,13 @@ img{
 
 h1{
     color: white;
-    font-family: 'Rubik', sans-serif;
     font-size: rem(64);
     font-weight: 900;
+    letter-spacing: rem(10);
 }
 
 h2{
     color: white;
-    font-family: 'Rubik', sans-serif;
     font-size: rem(52);
 }
 h3{
@@ -87,4 +86,12 @@ a, a:hover{
     @include breakpoint-up (large){
         display: none;
     }
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
