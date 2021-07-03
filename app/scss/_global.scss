@@ -9,6 +9,7 @@ html:focus-within {
 body {
     font-family: 'Rubik', sans-serif;
     min-height: 100vh;
+    max-width: 100vw;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }
@@ -44,7 +45,7 @@ h2{
     font-size: rem(52);
 }
 h3{
-    color: cyan;
+    color: $clr-pry;
 }
 
 

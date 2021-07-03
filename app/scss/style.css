@@ -73,6 +73,7 @@ html:focus-within {
 body {
   font-family: 'Rubik', sans-serif;
   min-height: 100vh;
+  max-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -108,7 +109,7 @@ h2 {
 }
 
 h3 {
-  color: cyan;
+  color: #67f66a;
 }
 
 a, a:hover {
@@ -201,19 +202,27 @@ a, a:hover {
   gap: 1.25rem;
 }
 
-.header__links a:hover {
+.header__links a {
   font-weight: 700;
+}
+
+.header__links a:hover {
+  color: #67f66a;
 }
 
 .header__cta {
   padding: 0.625rem 1.875rem;
-  border: 1px solid white;
+  color: #67f66a;
   border-radius: 1.25rem;
   font-weight: 700;
+  border: 2px solid #67f66a;
 }
 
 .header__cta:hover {
-  border: 2px solid white;
+  background-color: #67f66920;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  color: #67f66a;
 }
 
 .header__menu Span {
@@ -252,7 +261,7 @@ main .hero {
 main .hero__container__title span {
   margin-top: -0.625rem;
   display: block;
-  color: cyan;
+  color: #67f66a;
 }
 
 main .hero__container__socials {
@@ -266,7 +275,7 @@ main .hero__container__socials i {
 }
 
 main .hero__container__socials i:hover {
-  color: cyan;
+  color: #67f66a;
   -webkit-transition: color 500ms ease-in-out;
   transition: color 500ms ease-in-out;
 }
@@ -283,7 +292,7 @@ main .hero__intro P {
 }
 
 main .hero__intro P > a {
-  color: cyan;
+  color: #67f66a;
 }
 
 main .hero__intro P > a:hover {
@@ -320,7 +329,7 @@ main .hero__intro P > a:hover {
     line-height: 2.1875rem;
   }
   main .hero__intro P > a {
-    color: cyan;
+    color: #67f66a;
   }
 }
 
@@ -334,7 +343,7 @@ main .projects {
 
 main .projects h2 span {
   display: block;
-  background-color: cyan;
+  background-color: #67f66a;
   height: 5px;
   width: 100px;
   margin-left: auto;
@@ -343,14 +352,17 @@ main .projects h2 span {
 
 main .projects .project {
   margin-top: 3.125rem;
+  width: 100%;
+  place-items: center;
+  place-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 500px))[2];
-      grid-template-columns: repeat(2, minmax(100px, 500px));
+  -ms-grid-columns: (minmax(50px, 400px))[3];
+      grid-template-columns: repeat(3, minmax(50px, 400px));
   -ms-grid-rows: (minmax(100px, 350px))[2];
       grid-template-rows: repeat(2, minmax(100px, 350px));
-  -webkit-column-gap: 1.25rem;
-          column-gap: 1.25rem;
+  -webkit-column-gap: 0.625rem;
+          column-gap: 0.625rem;
 }
 
 @media (max-width: 1048px) {
@@ -371,7 +383,7 @@ main .projects .project__card {
   position: relative;
   background-repeat: no-repeat;
   background-size: 31.25rem 18.75rem;
-  width: 31.25rem;
+  width: 25rem;
   height: 18.75rem;
 }
 
@@ -395,7 +407,7 @@ main .projects .project__card-overlay {
 
 main .projects .project__card-overlay h4 {
   font-size: 2.25rem;
-  color: cyan;
+  color: #67f66a;
 }
 
 main .projects .project__card-overlay .tools {
@@ -404,15 +416,15 @@ main .projects .project__card-overlay .tools {
 
 main .projects .project__card-overlay .tools i {
   font-size: 2.1875rem;
-  color: cyan;
+  color: #67f66a;
 }
 
 main .projects .project__card-overlay a {
   display: none;
   margin-left: 0.625rem;
   position: relative;
-  border: 1px solid cyan;
-  color: cyan;
+  border: 1px solid #67f66a;
+  color: #67f66a;
   padding: 0.9375rem;
   border-radius: 1.875rem;
   font-weight: 600;
@@ -424,7 +436,7 @@ main .projects .project__card-overlay a span {
 }
 
 main .projects .project__card-overlay a:hover {
-  background: cyan;
+  background: #67f66a;
   color: white;
 }
 
@@ -452,7 +464,6 @@ main .projects .project__3 {
 }
 
 main .projects .project__4 {
-  position: relative;
   background-image: url(../images/project-3.jpg);
 }
 
@@ -469,7 +480,7 @@ main .skills h2 {
 
 main .skills h2 span {
   display: block;
-  background-color: cyan;
+  background-color: #67f66a;
   height: 5px;
   width: 100px;
   margin-left: auto;
@@ -501,14 +512,14 @@ main .skills .skill__card {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  border: 2px solid cyan;
+  border: 2px solid #67f66a;
   border-radius: 1.25rem;
   width: 200px;
   height: 100px;
 }
 
 main .skills .skill__card i {
-  color: cyan;
+  color: #67f66a;
   font-size: 1.875rem;
 }
 
@@ -548,7 +559,7 @@ main .skills .skill__card i {
 }
 
 .footer a {
-  color: cyan;
+  color: #67f66a;
 }
 
 .footer a:hover {

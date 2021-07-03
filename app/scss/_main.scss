@@ -23,7 +23,7 @@ main{
                 span{
                     margin-top: rem(-10);
                     display: block;
-                    color: cyan;
+                    color: $clr-pry;
                 }
             }
 
@@ -35,7 +35,7 @@ main{
                     font-size: rem(50);
 
                     &:hover{
-                        color: cyan;
+                        color: $clr-pry;
                         transition: color 500ms ease-in-out;
                     }
                 }
@@ -52,7 +52,7 @@ main{
                 line-height: rem(45);
 
                 >a{
-                    color: cyan;
+                    color: $clr-pry;
                     &:hover{
                         text-decoration: underline;
                     }
@@ -91,7 +91,7 @@ main{
                     line-height: rem(35);
     
                     >a{
-                        color: cyan;
+                        color: $clr-pry;
                     }
                 }
             }
@@ -108,7 +108,7 @@ main{
         h2{
             span{
                 display: block;
-                background-color: cyan;
+                background-color: $clr-pry;
                 height: 5px;
                 width: 100px;
                 margin-left: auto;
@@ -118,10 +118,13 @@ main{
         
         .project{
             margin-top: rem(50);
+            width: 100%;
+            place-items: center;
+            place-content: center;
             display: grid;
-            grid-template-columns: repeat(2, minmax(100px, 500px));
+            grid-template-columns: repeat(3, minmax(50px, 400px));
             grid-template-rows: repeat(2, minmax(100px, 350px));
-            column-gap: rem(20);
+            column-gap: rem(10);
 
             @media (max-width:1048px){
                 place-items: center;
@@ -140,7 +143,7 @@ main{
                 position: relative;
                 background-repeat: no-repeat;
                 background-size: rem(500) rem(300);
-                width: rem(500);
+                width: rem(400);
                 height: rem(300);
                 @media (max-width:544px){
                     background-size: rem(300) rem(300);
@@ -158,7 +161,7 @@ main{
                     h4{
                         
                         font-size: rem(36);
-                        color: cyan;
+                        color: $clr-pry;
                     }
 
                     .tools{
@@ -166,7 +169,7 @@ main{
                         gap: rem(20);
                          i{
                              font-size: rem(35);
-                             color: cyan;
+                             color: $clr-pry;
                          }
                     }
 
@@ -175,8 +178,8 @@ main{
                             display: none;
                             margin-left: rem(10);
                             position: relative;
-                            border: 1px solid cyan;
-                            color: cyan;
+                            border: 1px solid $clr-pry;
+                            color: $clr-pry;
                             padding: rem(15);
                             border-radius: rem(30);
                             font-weight: 600;
@@ -186,7 +189,7 @@ main{
                                 margin-left: rem(5);
                             }
                             &:hover{
-                                background: cyan;
+                                background: $clr-pry;
                                 color: white;
                             }
                     } 
@@ -226,7 +229,6 @@ main{
             }
 
             &__4{
-                position: relative;
                 background-image: url(../images/project-3.jpg);
             }
 
@@ -245,7 +247,7 @@ main{
             margin-top: rem(30);
             span{
                 display: block;
-                background-color: cyan;
+                background-color: $clr-pry;
                 height: 5px;
                 width: 100px;
                 margin-left: auto;
@@ -271,13 +273,13 @@ main{
             &__card{
                 display: grid;
                 place-items: center;
-                border: 2px solid cyan;
+                border: 2px solid $clr-pry;
                 border-radius: rem(20);
                 width: 200px;
                 height: 100px;
 
                 i{
-                    color: cyan;
+                    color: $clr-pry;
                     font-size: rem(30);
                 }
 

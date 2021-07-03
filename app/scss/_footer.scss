@@ -27,7 +27,7 @@
     }
 
     a{
-        color: cyan;
+        color: $clr-pry;
         &:hover{
             text-decoration: underline;
         }

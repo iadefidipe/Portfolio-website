@@ -27,6 +27,7 @@
         img{
             flex: 1;
             width: 70%;
+            
         }
     }
 
@@ -34,22 +35,29 @@
         gap: rem(20);
 
         a{
+            font-weight: 700;
+
             &:hover{
-                font-weight: 700;
+                color: $clr-pry;
             }
+
         }
 
     }
 
     &__cta{
         padding: rem(10) rem(30);
-        border: 1px solid white;
+        color: $clr-pry;        
         border-radius: rem(20);
         font-weight: 700;
+        border: 2px solid $clr-pry;
 
         &:hover{
-            border: 2px solid white;
+            background-color: #67f66920 ;
+            transition: 500ms ease-in-out;
+            color: $clr-pry;  
         }
+
     }
 
     &__menu{
