@@ -76,6 +76,7 @@ body {
   max-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: #181E2A;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -101,6 +102,13 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.625rem;
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.3125rem;
+  }
 }
 
 h2 {
@@ -246,6 +254,8 @@ a, a:hover {
   padding: 1rem 1.5rem;
   -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
+  -webkit-box-shadow: 2px 0 10px #363a43;
+          box-shadow: 2px 0 10px #363a43;
   top: 0;
   left: 0;
   right: 0;
@@ -301,6 +311,7 @@ main .hero__intro P > a:hover {
 
 @media (max-width: 850px) {
   main .hero {
+    padding: 1.25rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -361,15 +372,23 @@ main .projects .project {
       grid-template-columns: repeat(3, minmax(50px, 400px));
   -ms-grid-rows: (minmax(100px, 350px))[2];
       grid-template-rows: repeat(2, minmax(100px, 350px));
-  -webkit-column-gap: 0.625rem;
-          column-gap: 0.625rem;
+  gap: 0.625rem;
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1250px) {
   main .projects .project {
-    place-items: center;
-    -ms-grid-columns: (minmax(3.125rem, 31.25rem))[1];
-        grid-template-columns: repeat(1, minmax(3.125rem, 31.25rem));
+    gap: 0.3125rem;
+    -ms-grid-columns: (minmax(6.25rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
+    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
+        grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
+  }
+}
+
+@media (max-width: 850px) {
+  main .projects .project {
+    -ms-grid-columns: (minmax(3.125rem, 25rem))[1];
+        grid-template-columns: repeat(1, minmax(3.125rem, 25rem));
     -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
         grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
   }
@@ -385,6 +404,14 @@ main .projects .project__card {
   background-size: 31.25rem 18.75rem;
   width: 25rem;
   height: 18.75rem;
+}
+
+@media (max-width: 1250px) {
+  main .projects .project__card {
+    background-size: 1fr 18.75rem;
+    width: 1fr;
+    height: auto;
+  }
 }
 
 @media (max-width: 544px) {
@@ -468,6 +495,7 @@ main .projects .project__4 {
 }
 
 main .skills {
+  margin: 3.125rem 0;
   background-color: #181E2A;
   display: -ms-grid;
   display: grid;
@@ -488,23 +516,33 @@ main .skills h2 span {
 }
 
 main .skills .skill {
-  margin-top: 1.875rem;
+  margin: 3.125rem 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (200px)[4];
-      grid-template-columns: repeat(4, 200px);
-  -ms-grid-rows: (100px)[4];
-      grid-template-rows: repeat(4, 100px);
+  -ms-grid-columns: (minmax(100px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(100px, 1fr));
+  -ms-grid-rows: (100px)[2];
+      grid-template-rows: repeat(2, 100px);
   gap: 1.25rem;
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 960px) {
   main .skills .skill {
     place-items: center;
-    -ms-grid-columns: (200px)[2];
-        grid-template-columns: repeat(2, 200px);
-    -ms-grid-rows: (100px)[6];
-        grid-template-rows: repeat(6, 100px);
+    -ms-grid-columns: (minmax(100px, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    -ms-grid-rows: (100px)[4];
+        grid-template-rows: repeat(4, 100px);
+  }
+}
+
+@media (max-width: 500px) {
+  main .skills .skill {
+    gap: 0.625rem;
+    -ms-grid-columns: (minmax(100px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    -ms-grid-rows: (100px)[auto-fill];
+        grid-template-rows: repeat(auto-fill, 100px);
   }
 }
 
@@ -514,7 +552,7 @@ main .skills .skill__card {
   place-items: center;
   border: 2px solid #67f66a;
   border-radius: 1.25rem;
-  width: 200px;
+  min-width: 10.3125rem;
   height: 100px;
 }
 
@@ -524,7 +562,6 @@ main .skills .skill__card i {
 }
 
 .footer {
-  margin-top: -6.25rem;
   display: -ms-grid;
   display: grid;
   place-items: center;

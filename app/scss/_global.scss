@@ -12,6 +12,7 @@ body {
     max-width: 100vw;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background: $clr-bg;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -38,6 +39,11 @@ h1{
     font-size: rem(64);
     font-weight: 900;
     letter-spacing: rem(10);
+
+    @media (max-width: 850px){
+        font-size:  rem(56);
+        letter-spacing: rem(5);
+    }
 }
 
 h2{

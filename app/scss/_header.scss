@@ -82,10 +82,13 @@
     background: #1c2230c6;
      padding: 1rem 1.5rem;
      transition: 100ms ease-in-out;
+
+     box-shadow: 2px 0 10px #363a43;
     
     top:0;
     left: 0;
     right:0;
 
     z-index: 100000;
+
 }
