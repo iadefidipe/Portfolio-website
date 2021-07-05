@@ -34,14 +34,35 @@
     &__links{
         gap: rem(20);
 
-        a{
+       
+        
+
+         a{
             font-weight: 700;
+            
+
 
             &:hover{
                 color: $clr-pry;
             }
+            &:first-child{
+                animation: nav 1s ease-in;
+            }
+
+            &:nth-child(2){
+                animation: nav 1s ease-in 1s;
+            }
+            &:last-child{
+                animation: nav 1s ease-in 1.5s;
+
+            }
+
+
 
         }
+
+
+
 
     }
 
@@ -51,6 +72,8 @@
         border-radius: rem(20);
         font-weight: 700;
         border: 2px solid $clr-pry;
+        animation: nav 1s ease-in 2s;
+        
 
         &:hover{
             background-color: #67f66920 ;

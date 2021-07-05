@@ -64,6 +64,23 @@ select {
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
+@-webkit-keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -218,12 +235,29 @@ a, a:hover {
   color: #67f66a;
 }
 
+.header__links a:first-child {
+  -webkit-animation: nav 1s ease-in;
+          animation: nav 1s ease-in;
+}
+
+.header__links a:nth-child(2) {
+  -webkit-animation: nav 1s ease-in 1s;
+          animation: nav 1s ease-in 1s;
+}
+
+.header__links a:last-child {
+  -webkit-animation: nav 1s ease-in 1.5s;
+          animation: nav 1s ease-in 1.5s;
+}
+
 .header__cta {
   padding: 0.625rem 1.875rem;
   color: #67f66a;
   border-radius: 1.25rem;
   font-weight: 700;
   border: 2px solid #67f66a;
+  -webkit-animation: nav 1s ease-in 2s;
+          animation: nav 1s ease-in 2s;
 }
 
 .header__cta:hover {
@@ -389,8 +423,8 @@ main .projects .project {
   main .projects .project {
     -ms-grid-columns: (minmax(3.125rem, 25rem))[1];
         grid-template-columns: repeat(1, minmax(3.125rem, 25rem));
-    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
-        grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
+    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[6];
+        grid-template-rows: repeat(6, minmax(6.25rem, 21.875rem));
   }
 }
 
@@ -468,7 +502,7 @@ main .projects .project__card-overlay a:hover {
 }
 
 main .projects .project__card-overlay:hover {
-  background: rgba(22, 22, 22, 0.344);
+  background: #16161658;
   opacity: 1;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;

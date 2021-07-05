@@ -134,7 +134,7 @@ main{
 
                 
                     grid-template-columns: repeat(1,minmax(rem(50), rem(400)));
-                    grid-template-rows: repeat(4, minmax(rem(100), rem(350)));
+                    grid-template-rows: repeat(6, minmax(rem(100), rem(350)));
             
             }
 
@@ -170,6 +170,7 @@ main{
                     height:rem(300);
                     gap: rem(30);
                     opacity: 0;
+                    
 
                     h4{
                         
@@ -210,7 +211,7 @@ main{
 
                     &:hover{
 
-                            background:rgba(22, 22, 22, 0.344);
+                            background:#16161658;
                             // animation: overlay 1s ease-in ;
                             opacity: 1;
                             transition: all 500ms ease-in-out;
