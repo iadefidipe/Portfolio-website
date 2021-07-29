@@ -4,7 +4,17 @@
 html:focus-within {
   scroll-behavior: smooth;
 }
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
 /* Set core body defaults */
 body {
     font-family: 'Rubik', sans-serif;
@@ -51,7 +61,8 @@ h2{
     font-size: rem(52);
 }
 h3{
-    color: $clr-pry;
+    color: white;
+    font-size:  rem(36);
 }
 
 

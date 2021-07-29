@@ -86,6 +86,20 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 /* Set core body defaults */
 body {
   font-family: 'Rubik', sans-serif;
@@ -105,7 +119,7 @@ select {
 }
 
 header {
-  background-color: #1C2230;
+  background-color: #2c323f;
 }
 
 img {
@@ -134,7 +148,8 @@ h2 {
 }
 
 h3 {
-  color: #67f66a;
+  color: white;
+  font-size: 2.25rem;
 }
 
 a, a:hover {
@@ -200,6 +215,12 @@ a, a:hover {
 
 .header {
   padding: 1rem 1.5rem;
+  background: #2c323f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
 }
 
 .header.open .header__menu > span:first-child {
@@ -284,16 +305,11 @@ a, a:hover {
 
 .sticky {
   position: fixed;
-  background: #1c2230c6;
   padding: 1rem 1.5rem;
   -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
   -webkit-box-shadow: 2px 0 10px #363a43;
           box-shadow: 2px 0 10px #363a43;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100000;
 }
 
 main .hero {
@@ -308,20 +324,38 @@ main .hero__container__title span {
   color: #67f66a;
 }
 
-main .hero__container__socials {
+main .hero__container-socials {
   margin-top: 1.875rem;
   gap: 1.875rem;
 }
 
-main .hero__container__socials i {
-  color: white;
-  font-size: 3.125rem;
+main .hero__container-socials .sm {
+  background: #2c323f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
 }
 
-main .hero__container__socials i:hover {
+main .hero__container-socials .sm:hover {
+  padding: 0.75rem;
+}
+
+main .hero__container-socials i {
   color: #67f66a;
+  font-size: 1.25rem;
+}
+
+main .hero__container-socials i:hover {
+  color: white;
   -webkit-transition: color 500ms ease-in-out;
   transition: color 500ms ease-in-out;
+}
+
+main .hero__container-socials p {
+  color: #67f66a;
 }
 
 main .hero__intro {
@@ -383,6 +417,7 @@ main .projects {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  place-content: center;
   padding: 1.25rem;
 }
 
@@ -398,134 +433,75 @@ main .projects h2 span {
 main .projects .project {
   margin-top: 3.125rem;
   width: 100%;
-  place-items: center;
-  place-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(50px, 400px))[3];
-      grid-template-columns: repeat(3, minmax(50px, 400px));
-  -ms-grid-rows: (minmax(100px, 350px))[2];
-      grid-template-rows: repeat(2, minmax(100px, 350px));
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (minmax(100px, auto))[2];
+      grid-template-rows: repeat(2, minmax(100px, auto));
   gap: 0.625rem;
-}
-
-@media (max-width: 1250px) {
-  main .projects .project {
-    gap: 0.3125rem;
-    -ms-grid-columns: (minmax(6.25rem, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
-    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[4];
-        grid-template-rows: repeat(4, minmax(6.25rem, 21.875rem));
-  }
-}
-
-@media (max-width: 850px) {
-  main .projects .project {
-    -ms-grid-columns: (minmax(3.125rem, 25rem))[1];
-        grid-template-columns: repeat(1, minmax(3.125rem, 25rem));
-    -ms-grid-rows: (minmax(6.25rem, 21.875rem))[6];
-        grid-template-rows: repeat(6, minmax(6.25rem, 21.875rem));
-  }
-}
-
-main .projects .project a {
-  display: none;
 }
 
 main .projects .project__card {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: 31.25rem 18.75rem;
-  width: 25rem;
-  height: 18.75rem;
-}
-
-@media (max-width: 1250px) {
-  main .projects .project__card {
-    background-size: 1fr 18.75rem;
-    width: 1fr;
-    height: auto;
-  }
-}
-
-@media (max-width: 544px) {
-  main .projects .project__card {
-    background-size: 18.75rem 18.75rem;
-    width: 18.75rem;
-    height: 18.75rem;
-  }
-}
-
-main .projects .project__card-overlay {
+  background-color: #181E2A;
+  padding: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 18.75rem;
-  gap: 1.875rem;
-  opacity: 0;
+  gap: 0.9375rem;
 }
 
-main .projects .project__card-overlay h4 {
-  font-size: 2.25rem;
-  color: #67f66a;
-}
-
-main .projects .project__card-overlay .tools {
+main .projects .project__card-link {
   gap: 1.25rem;
 }
 
-main .projects .project__card-overlay .tools i {
-  font-size: 2.1875rem;
+main .projects .project__card-link a {
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+  background-color: #2c323f;
   color: #67f66a;
+  font-weight: 700;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
-main .projects .project__card-overlay a {
-  display: none;
-  margin-left: 0.625rem;
-  position: relative;
-  border: 1px solid #67f66a;
-  color: #67f66a;
-  padding: 0.9375rem;
-  border-radius: 1.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
+main .projects .project__card-link a:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
-main .projects .project__card-overlay a span {
-  margin-left: 0.3125rem;
-}
-
-main .projects .project__card-overlay a:hover {
-  background: #67f66a;
+main .projects .project__card p {
   color: white;
+  font-weight: 700;
 }
 
-main .projects .project__card-overlay:hover {
-  background: #16161658;
-  opacity: 1;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+main .projects .project__card .tools {
+  gap: 1.25rem;
 }
 
-main .projects .project__card-overlay:hover a {
-  display: inline;
+main .projects .project__card .tools i {
+  color: #67f66a;
+  font-size: 1.25rem;
 }
 
-main .projects .project__1 {
-  background-image: url(../images/project-2.jpg);
+main .projects .project__card-img {
+  background-color: #67f66a;
+  display: none;
 }
 
-main .projects .project__2 {
-  background-image: url(../images/project-5.jpg);
+main .projects .project__card-img img {
+  height: 18.75rem;
 }
 
-main .projects .project__3 {
-  background-image: url(../images/project-4.jpg);
-}
-
-main .projects .project__4 {
-  background-image: url(../images/project-3.jpg);
+main .project__card-link:hover ~ .project__card-img {
+  display: block;
 }
 
 main .skills {

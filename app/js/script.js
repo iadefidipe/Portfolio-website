@@ -41,19 +41,21 @@ const allSection = document.querySelectorAll('.section');
 //  });
 
  
-//  TODO: Implementing Sticky navbar
-const navHeight = nav.getBoundingClientRect().height;
+// //  TODO: Implementing Sticky navbar
+// const navHeight = nav.getBoundingClientRect().height;
 
-const stickyNav = function (entries) {
-  const [entry] = entries; //destructuring entries
+// const stickyNav = function (entries) {
+//   const [entry] = entries; //destructuring entries
 
-  if (!entry.isIntersecting) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
-};
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `${navHeight}px`,
-});
-headerObserver.observe(header);
+//   if (!entry.isIntersecting) nav.classList.add("sticky");
+//   else nav.classList.remove("sticky");
+// };
+
+// const headerObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `${navHeight}px`,
+// });
+
+// headerObserver.observe(header);
 

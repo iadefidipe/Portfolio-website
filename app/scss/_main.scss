@@ -23,17 +23,36 @@ main{
                 }
             }
 
-            &__socials{
+            &-socials{
                 margin-top: rem(30);
                 gap: rem(30);
-                i{
-                    color: white;
-                    font-size: rem(50);
+
+                .sm{
+                    background:  $clr-header;
+                    display: flex;
+                    gap: rem(5);
+                    padding: rem(10);
+                    border-radius: rem(5);
 
                     &:hover{
-                        color: $clr-pry;
+                        padding: rem(12);
+
+                    }
+                }
+
+                i{
+                    color: $clr-pry;
+                    font-size: rem(20);
+
+                    &:hover{
+                        color: white;
                         transition: color 500ms ease-in-out;
                     }
+                }
+
+                p{
+                    color: $clr-pry;
+                    
                 }
             }
             
@@ -100,6 +119,7 @@ main{
         background-color: #1C2230;
         display: grid;
         place-items: center;
+        place-content: center;
         padding: rem(20);
 
         h2{
@@ -116,140 +136,84 @@ main{
         .project{
             margin-top: rem(50);
             width: 100%;
-            place-items: center;
-            place-content: center;
             display: grid;
-            grid-template-columns: repeat(3, minmax(50px, 400px));
-            grid-template-rows: repeat(2, minmax(100px, 350px));
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, minmax(100px, auto));
             gap: rem(10);
 
-            @media (max-width:1250px){
-
-                gap: rem(5);
-                    grid-template-columns: repeat(2,minmax(rem(100),1fr ));
-                    grid-template-rows: repeat(4, minmax(rem(100), rem(350)));            
-            }
-
-            @media (max-width:850px){
-
-                
-                    grid-template-columns: repeat(1,minmax(rem(50), rem(400)));
-                    grid-template-rows: repeat(6, minmax(rem(100), rem(350)));
-            
-            }
-
-
-            a{
-                display:none;
-            }
             
 
             &__card{
                 position: relative;
-                background-repeat: no-repeat;
-                background-size: rem(500) rem(300);
-                width: rem(400);
-                height: rem(300);
-
-                @media (max-width:1250px){
-                    background-size: 1fr rem(300);
-                    width: 1fr;
-                    height: auto;
-                }
+                background-color: $clr-bg;
+                padding:  rem(50);
+                display: flex;
+                flex-direction: column;
+                gap: rem(15);
 
 
-                @media (max-width:544px){
-                    background-size: rem(300) rem(300);
-                    width: rem(300);
-                    height: rem(300);
-                }
-
-                &-overlay{
-                    
-                    flex-direction: column;
-                    height:rem(300);
-                    gap: rem(30);
-                    opacity: 0;
-                    
-
-                    h4{
-                        
-                        font-size: rem(36);
-                        color: $clr-pry;
-                    }
-
-                    .tools{
-        
-                        gap: rem(20);
-                         i{
-                             font-size: rem(35);
-                             color: $clr-pry;
-                         }
-                    }
-
+                &-link{
+                    gap: rem(20);
 
                     a{
-                            display: none;
-                            margin-left: rem(10);
-                            position: relative;
-                            border: 1px solid $clr-pry;
-                            color: $clr-pry;
-                            padding: rem(15);
-                            border-radius: rem(30);
-                            font-weight: 600;
-                            text-transform: uppercase;
+                        border-radius: rem(5);
+                        padding: rem(10);
+                        background-color: $clr-header;
+                        color : $clr-pry;
+                        font-weight: $weight-bold;
+                        transition: transform 200ms ease;
 
-                            span{
-                                margin-left: rem(5);
-                            }
-                            &:hover{
-                                background: $clr-pry;
-                                color: white;
-                            }
-                    } 
+                        &:hover{
+                            transform: translateY(-2px);
+                        }
 
 
-                    &:hover{
+                    }
+                    
+                }
 
-                            background:#16161658;
-                            // animation: overlay 1s ease-in ;
-                            opacity: 1;
-                            transition: all 500ms ease-in-out;
+                p{
+                    color: white;
+                    font-weight: $weight-bold;
+                }
 
-                            a{
-                                display: inline;
-                            }
+                .tools{
+
+                    gap: rem(20);
+                    i{
+                        color: $clr-pry;
+                        font-size: rem(20);
+                    }
+                }
+
+                &-img{
+                    background-color: $clr-pry;
+                    display:none;
+
+                    img{
+
+                        height: rem(300);
+
                     }
 
-
+    
 
                 }
 
-            }
-
-            &__1{
                 
-                background-image: url(../images/project-2.jpg);
-                
+
             }
 
-            &__2{
-                background-image: url(../images/project-5.jpg);
-            
-            }
-
-            &__3{
-                background-image: url(../images/project-4.jpg);
-                
-            }
-
-            &__4{
-                background-image: url(../images/project-3.jpg);
-            }
+        
 
             
 
         }
+    }
+
+    .project__card-link:hover ~ .project__card-img{
+                    
+        display: block;
     }
 
     .skills{
