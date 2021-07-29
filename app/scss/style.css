@@ -452,7 +452,7 @@ main .projects .project {
 main .projects .project__card {
   position: relative;
   background-color: #181E2A;
-  padding: 3.125rem;
+  padding: 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
