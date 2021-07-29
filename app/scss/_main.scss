@@ -141,6 +141,11 @@ main{
             grid-template-rows: repeat(2, minmax(100px, auto));
             gap: rem(10);
 
+            @media (max-width:960px){
+                grid-template-columns: 1fr;      
+            
+            }
+
             
 
             &__card{
@@ -187,8 +192,10 @@ main{
                 }
 
                 &-img{
-                    background-color: $clr-pry;
+
                     display:none;
+                    transition: all 500ms ease-in-out;
+
 
                     img{
 
@@ -196,25 +203,25 @@ main{
 
                     }
 
-    
+                }   
+                
+                &:hover, &:focus{
+                    transform: translateY(2px);
+                    box-shadow: 0px 0 10px  #090a0a;
 
+                    .project__card-img{
+                        display: block;
+                    }
                 }
 
-                
-
             }
-
-        
-
-            
-
         }
     }
 
-    .project__card-link:hover ~ .project__card-img{
+    // .project__card-link:hover ~ .project__card-img, .project__card h3:hover ~ .project__card-img, .project__card ul:hover ~ .project__card-img, .project__card p:hover ~ .project__card-img{
                     
-        display: block;
-    }
+    //     display: block;
+    // }
 
     .skills{
         margin: rem(50) 0 ;

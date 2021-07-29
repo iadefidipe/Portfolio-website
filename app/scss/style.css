@@ -442,6 +442,13 @@ main .projects .project {
   gap: 0.625rem;
 }
 
+@media (max-width: 960px) {
+  main .projects .project {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 main .projects .project__card {
   position: relative;
   background-color: #181E2A;
@@ -492,15 +499,23 @@ main .projects .project__card .tools i {
 }
 
 main .projects .project__card-img {
-  background-color: #67f66a;
   display: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 main .projects .project__card-img img {
   height: 18.75rem;
 }
 
-main .project__card-link:hover ~ .project__card-img {
+main .projects .project__card:hover, main .projects .project__card:focus {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0px 0 10px  #090a0a;
+          box-shadow: 0px 0 10px  #090a0a;
+}
+
+main .projects .project__card:hover .project__card-img, main .projects .project__card:focus .project__card-img {
   display: block;
 }
 
