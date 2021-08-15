@@ -14,7 +14,29 @@
         opacity:1;
     }
 
+    50%{
+        opacity:0.5;
+    }
+
     100%{
+        opacity:0;
+
         transform: translateX(-100%);
+    }
+}
+
+@keyframes titleIn{
+    0%{
+        opacity:0;
+    }
+
+    50%{
+        opacity:0.5;
+    }
+
+    100%{
+        opacity:1;
+
+        transform: translateX(0);
     }
 }

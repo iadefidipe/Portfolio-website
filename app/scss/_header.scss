@@ -9,24 +9,24 @@
 
     
 
-    &.open{
+    // &.open{
 
 
-        .header__menu{
-            >span:first-child{
-                transform: rotate(45deg);
-            }
+    //     .header__menu{
+    //         >span:first-child{
+    //             transform: rotate(45deg);
+    //         }
 
-            >span:nth-child(2){
-                opacity: 0;
-            }
+    //         >span:nth-child(2){
+    //             opacity: 0;
+    //         }
 
-            >span:last-child{
-                transform: rotate(-45deg);
-            }
+    //         >span:last-child{
+    //             transform: rotate(-45deg);
+    //         }
 
-        }
-    } 
+    //     }
+    // } 
 
 
     &__logo{
@@ -106,14 +106,11 @@
     }
 }
 
-.sticky{
-    position:fixed;
-     padding: 1rem 1.5rem;
-     transition: 100ms ease-in-out;
+// .sticky{
+//     position:fixed;
+//      padding: 1rem 1.5rem;
+//      transition: 100ms ease-in-out;
 
-     box-shadow: 2px 0 10px #363a43;
-    
-    
+//      box-shadow: 2px 0 10px #363a43;
 
-
-}
+// }

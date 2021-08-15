@@ -85,7 +85,11 @@ select {
   0% {
     opacity: 1;
   }
+  50% {
+    opacity: 0.5;
+  }
   100% {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
@@ -95,9 +99,41 @@ select {
   0% {
     opacity: 1;
   }
+  50% {
+    opacity: 0.5;
+  }
   100% {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes titleIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes titleIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -249,20 +285,6 @@ a, a:hover {
   z-index: 100000;
 }
 
-.header.open .header__menu > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header.open .header__menu > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header.open .header__menu > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 .header__logo img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -329,17 +351,8 @@ a, a:hover {
   margin-bottom: 0.3125rem;
 }
 
-.sticky {
-  position: fixed;
-  padding: 1rem 1.5rem;
-  -webkit-transition: 100ms ease-in-out;
-  transition: 100ms ease-in-out;
-  -webkit-box-shadow: 2px 0 10px #363a43;
-          box-shadow: 2px 0 10px #363a43;
-}
-
 main .hero {
-  padding: 3.125rem;
+  padding: 6.25rem 1.25rem;
   background: #181e2a;
   gap: 6.25rem;
 }
@@ -348,11 +361,6 @@ main .hero__container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-main .hero__container__title {
-  -webkit-animation: titleOut 1s ease-in;
-          animation: titleOut 1s ease-in;
 }
 
 main .hero__container__title span {
@@ -397,7 +405,7 @@ main .hero__container-socials p {
 }
 
 main .hero__intro {
-  padding: 1.5625rem;
+  padding: 1.5625rem 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

@@ -8,6 +8,25 @@ const overlay = document.querySelector('.overlay');
 const btnHamburger = document.getElementById('btnHamburger');
 const allSection = document.querySelectorAll('.section');
 
+const title = document.querySelector('.title');
+
+// function titleDisplay(){
+//     if (!title.classList.contains('title--hidden')){
+//         title.style.animation = `titleOut 1s  ease-in forwards;`; 
+//         title.style.display = `none`; 
+
+        
+
+//     }
+//     else{
+//         title.style.display = `block`; 
+
+//         title.style.animation = `titleIn 1s  ease-in forwards;`; 
+
+//     }
+// }
+// setInterval(titleDisplay, 2000);
+
 
 // btnHamburger.addEventListener('click', function(){
 //     if (header.classList.contains('.open')){
