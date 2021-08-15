@@ -17,7 +17,7 @@ html{
 }
 /* Set core body defaults */
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: $fonts-poppins;
     min-height: 100vh;
     max-width: 100vw;
     text-rendering: optimizeSpeed;
@@ -44,9 +44,13 @@ img{
     display: block;
 }
 
-h1{
+h1, h2, h3,h5{
+    font-family: $fonts-press;
     color: white;
-    font-size: rem(64);
+}
+
+h1{
+    font-size: rem(56);
     font-weight: 900;
     letter-spacing: rem(10);
 
@@ -57,18 +61,20 @@ h1{
 }
 
 h2{
-    color: white;
     font-size: rem(52);
 }
 h3{
-    color: white;
     font-size:  rem(36);
+}
+
+h5{
+    font-size: rem(36);
+    color: $clr-pry;
 }
 
 
 a, a:hover{
     text-decoration: none;
-    color: white;
 }
 
 

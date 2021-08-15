@@ -8,3 +8,13 @@
         // transition: 500ms ease-in;
     }
 }
+
+@keyframes titleOut{
+    0%{
+        opacity:1;
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
