@@ -51,12 +51,14 @@ h1, h2, h3,h5{
 
 h1{
     font-size: rem(56);
-    font-weight: 900;
     letter-spacing: rem(10);
 
     @media (max-width: 850px){
-        font-size:  rem(56);
         letter-spacing: rem(5);
+    }
+
+    @media (max-width: 500px){
+        letter-spacing: rem(3);
     }
 }
 

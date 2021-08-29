@@ -1,69 +1,3 @@
-html {
-  font-size: 100%;
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"], li {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
 @-webkit-keyframes nav {
   0% {
     opacity: 0;
@@ -72,6 +6,7 @@ select {
     opacity: 1;
   }
 }
+
 @keyframes nav {
   0% {
     opacity: 0;
@@ -191,14 +126,18 @@ h1, h2, h3, h5 {
 
 h1 {
   font-size: 3.5rem;
-  font-weight: 900;
   letter-spacing: 0.625rem;
 }
 
 @media (max-width: 850px) {
   h1 {
-    font-size: 3.5rem;
     letter-spacing: 0.3125rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    letter-spacing: 0.1875rem;
   }
 }
 
@@ -285,48 +224,38 @@ a, a:hover {
   z-index: 100000;
 }
 
+.header__logo {
+  -webkit-animation: nav 500ms  ease-in 2s;
+          animation: nav 500ms  ease-in 2s;
+}
+
 .header__logo img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   width: 70%;
-}
-
-.header__links {
-  gap: 1.25rem;
-}
-
-.header__links a {
-  font-weight: 700;
-}
-
-.header__links a:hover {
-  color: #67f66a;
-}
-
-.header__links a:first-child {
-  -webkit-animation: nav 1s ease-in;
-          animation: nav 1s ease-in;
-}
-
-.header__links a:nth-child(2) {
-  -webkit-animation: nav 1s ease-in 1s;
-          animation: nav 1s ease-in 1s;
-}
-
-.header__links a:last-child {
-  -webkit-animation: nav 1s ease-in 1.5s;
-          animation: nav 1s ease-in 1.5s;
 }
 
 .header__cta {
   padding: 0.625rem 1.875rem;
   color: #67f66a;
+  min-width: 9.375rem;
   border-radius: 1.25rem;
   font-weight: 700;
   border: 2px solid #67f66a;
-  -webkit-animation: nav 1s ease-in 2s;
-          animation: nav 1s ease-in 2s;
+  -webkit-animation: nav 500ms 500ms ease-in 2s;
+          animation: nav 500ms 500ms ease-in 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 39.9375em) {
+  .header__cta {
+    padding: 0.625rem 0.9375rem;
+    font-size: 0.75rem;
+  }
 }
 
 .header__cta:hover {
@@ -336,31 +265,10 @@ a, a:hover {
   color: #67f66a;
 }
 
-.header__menu Span {
-  display: block;
-  width: 1.625rem;
-  height: 0.125rem;
-  background-color: white;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transform-origin: 3px 1px;
-          transform-origin: 3px 1px;
-}
-
-.header__menu Span:not(:last-child) {
-  margin-bottom: 0.3125rem;
-}
-
 main .hero {
   padding: 6.25rem 1.25rem;
   background: #181e2a;
   gap: 6.25rem;
-}
-
-main .hero__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 main .hero__container__title span {
@@ -372,6 +280,8 @@ main .hero__container__title span {
 main .hero__container-socials {
   margin-top: 1.875rem;
   gap: 0.625rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .hero__container-socials .sm {
@@ -379,6 +289,9 @@ main .hero__container-socials .sm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.3125rem;
   padding: 0.625rem;
   border-radius: 0.3125rem;
@@ -406,15 +319,12 @@ main .hero__container-socials p {
 
 main .hero__intro {
   padding: 1.5625rem 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 main .hero__intro P {
   font-size: 1.5rem;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 2.8125rem;
 }
 
@@ -428,7 +338,7 @@ main .hero__intro P > a:hover {
 
 @media (max-width: 850px) {
   main .hero {
-    padding: 1.25rem;
+    padding: 6.25rem 1.25rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -442,10 +352,13 @@ main .hero__intro P > a:hover {
     font-size: 3rem;
   }
   main .hero__container__socials {
-    gap: 1.875rem;
+    gap: 0.625rem;
+  }
+  main .hero__container__socials .sm {
+    padding: 0.3125rem;
   }
   main .hero__container__socials i {
-    font-size: 1.875rem;
+    font-size: 1.25rem;
   }
   main .hero__intro {
     padding: 0;
@@ -453,7 +366,6 @@ main .hero__intro P > a:hover {
   main .hero__intro P {
     font-size: 1.25rem;
     color: white;
-    font-weight: 600;
     line-height: 2.1875rem;
   }
   main .hero__intro P > a {

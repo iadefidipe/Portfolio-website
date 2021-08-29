@@ -6,13 +6,15 @@
 }
 
 main {
+
   .hero {
     padding: rem(100) rem(20);
     background: #181e2a;
     gap: rem(100);
 
+  
+   
     &__container {
-        flex: 1;
 
       &__title {
         span {
@@ -26,10 +28,12 @@ main {
       &-socials {
         margin-top: rem(30);
         gap: rem(10);
+        flex-wrap: wrap;
 
         .sm {
           background: $clr-header;
           display: flex;
+          align-items: center;
           gap: rem(5);
           padding: rem(10);
           border-radius: rem(5);
@@ -54,14 +58,17 @@ main {
         }
       }
     }
+    
+
+      
+
 
     &__intro {
       padding: rem(25) 0;
-      flex:1;
       P {
         font-size: rem(24);
         color: white;
-        font-weight: 600;
+        font-weight: 500;
         line-height: rem(45);
 
         > a {
@@ -74,12 +81,13 @@ main {
     }
 
     @media (max-width: 850px) {
-      padding: rem(20);
+      padding: rem(100) rem(20);
       flex-direction: column;
       align-items: flex-start;
       gap: rem(50);
 
       &__container {
+
         &__title {
           h1 {
             font-size: rem(48);
@@ -87,9 +95,13 @@ main {
         }
 
         &__socials {
-          gap: rem(30);
+          .sm{
+            padding: rem(5);
+          }
+          
+          gap: rem(10);
           i {
-            font-size: rem(30);
+            font-size: rem(20);
           }
         }
       }
@@ -99,7 +111,6 @@ main {
         P {
           font-size: rem(20);
           color: white;
-          font-weight: 600;
           line-height: rem(35);
 
           > a {
