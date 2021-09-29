@@ -451,7 +451,7 @@ main .projects .project__card-link a:hover {
 
 main .projects .project__card p {
   color: white;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 main .projects .project__card .tools {
