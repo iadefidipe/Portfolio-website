@@ -84,7 +84,9 @@ html {
   scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   margin: 0;
@@ -123,7 +125,10 @@ img {
   display: block;
 }
 
-h1, h2, h3, h5 {
+h1,
+h2,
+h3,
+h5 {
   font-family: "Graduate", cursive;
   color: white;
 }
@@ -158,7 +163,8 @@ h5 {
   color: #67f66a;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -190,6 +196,13 @@ a, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /***********visibility ********/
@@ -270,9 +283,14 @@ a, a:hover {
 }
 
 main .hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 6.25rem 1.25rem;
   background: #181e2a;
   gap: 6.25rem;
+  text-align: center;
 }
 
 main .hero__container__title span {
@@ -343,13 +361,6 @@ main .hero__intro P > a:hover {
 @media (max-width: 850px) {
   main .hero {
     padding: 6.25rem 1.25rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 3.125rem;
   }
   main .hero__container__title h1 {
@@ -426,6 +437,8 @@ main .projects .project__card {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.9375rem;
+  -webkit-box-shadow: 0px 0 10px #090a0a;
+          box-shadow: 0px 0 10px #090a0a;
 }
 
 main .projects .project__card-link {
@@ -464,24 +477,13 @@ main .projects .project__card .tools i {
 }
 
 main .projects .project__card-img {
-  display: none;
+  display: block;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 main .projects .project__card-img img {
   height: 18.75rem;
-}
-
-main .projects .project__card:hover, main .projects .project__card:focus {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  -webkit-box-shadow: 0px 0 10px #090a0a;
-          box-shadow: 0px 0 10px #090a0a;
-}
-
-main .projects .project__card:hover .project__card-img, main .projects .project__card:focus .project__card-img {
-  display: block;
 }
 
 main .skills {
