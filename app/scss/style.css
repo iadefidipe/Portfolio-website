@@ -367,6 +367,12 @@ main .hero__intro P > a:hover {
     font-size: 3rem;
   }
   main .hero__container__socials {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 0.625rem;
   }
   main .hero__container__socials .sm {
@@ -546,44 +552,64 @@ main .skills .skill p {
   color: white;
 }
 
-.footer {
+main .cta {
   display: -ms-grid;
   display: grid;
   place-items: center;
   gap: 1.25rem;
   padding: 3.125rem;
-  background: #1C2230;
+  background: #1c2230;
   text-align: center;
 }
 
-.footer h4 {
+main .cta h4 {
   color: white;
   font-size: 1.5rem;
 }
 
 @media (max-width: 1070px) {
-  .footer h4 {
+  main .cta h4 {
     width: 60%;
   }
 }
 
 @media (max-width: 950px) {
-  .footer h4 {
+  main .cta h4 {
     width: 80%;
   }
 }
 
-.footer p {
+main .cta p {
   font-size: 1.125rem;
   color: white;
   font-weight: 500;
 }
 
-.footer a {
+main .cta a {
   color: #67f66a;
 }
 
-.footer a:hover {
+main .cta a:hover {
   text-decoration: underline;
+}
+
+footer {
+  color: white;
+  padding: 20px;
+}
+
+footer a {
+  color: #67f66a;
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

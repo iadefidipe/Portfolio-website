@@ -1,37 +1,13 @@
-.footer{
-    // margin-top: rem(100);
-    display: grid;
-    place-items: center;
-    gap: rem(20);
-    padding: rem(50);
-    background:#1C2230;
-    text-align: center;
-    h4{
-        // width: 100%;
-        color: white;
-        font-size: rem(24);
+footer {
+	color: white;
+	padding: 20px;
+	a {
+		color: $clr-pry;
+		text-decoration: underline;
+	}
 
-        @media (max-width:1070px){
-            width: 60%;
-        }
-
-        @media (max-width:950px){
-            width: 80%;
-        }
-    }
-
-    p{
-        font-size: rem(18);
-        color: white;
-        font-weight: 500;
-    }
-
-    a{
-        color: $clr-pry;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-
-
+	@media (max-width: 500px) {
+		flex-direction: column;
+		text-align: center;
+	}
 }
