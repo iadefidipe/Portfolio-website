@@ -1,3 +1,69 @@
+html {
+  font-size: 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"], li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
 @-webkit-keyframes nav {
   0% {
     opacity: 0;
@@ -6,7 +72,6 @@
     opacity: 1;
   }
 }
-
 @keyframes nav {
   0% {
     opacity: 0;
@@ -231,6 +296,11 @@ a:hover {
           transform: translateY(8rem);
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .header {
   padding: 1rem 1.5rem;
   background: #2c323f;
@@ -280,6 +350,20 @@ a:hover {
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   color: #67f66a;
+}
+
+main h2 {
+  margin-top: 1.875rem;
+  text-align: center;
+}
+
+main h2 span {
+  display: block;
+  background-color: #67f66a;
+  height: 5px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .hero {
@@ -403,15 +487,6 @@ main .projects {
   padding: 1.25rem;
 }
 
-main .projects h2 span {
-  display: block;
-  background-color: #67f66a;
-  height: 5px;
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 main .projects .project {
   margin-top: 3.125rem;
   width: 100%;
@@ -500,19 +575,6 @@ main .skills {
   place-items: center;
   place-content: center;
   gap: 1.875rem;
-}
-
-main .skills h2 {
-  margin-top: 1.875rem;
-}
-
-main .skills h2 span {
-  display: block;
-  background-color: #67f66a;
-  height: 5px;
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 main .skills .skill {
