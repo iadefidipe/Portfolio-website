@@ -618,6 +618,7 @@ main .cta {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  place-content: center;
   gap: 1.25rem;
   padding: 3.125rem;
   background: #1c2230;
@@ -637,7 +638,7 @@ main .cta h4 {
 
 @media (max-width: 950px) {
   main .cta h4 {
-    width: 80%;
+    width: 100%;
   }
 }
 
