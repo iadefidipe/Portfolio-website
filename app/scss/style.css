@@ -384,6 +384,9 @@ main .hero__container__title span {
 }
 
 main .hero__container-socials {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1.875rem;
   gap: 0.625rem;
   -ms-flex-wrap: wrap;
@@ -552,9 +555,8 @@ main .projects .project__card .tools {
   gap: 1.25rem;
 }
 
-main .projects .project__card .tools i {
-  color: #67f66a;
-  font-size: 1.25rem;
+main .projects .project__card .tools img {
+  height: 1.25rem;
 }
 
 main .projects .project__card-img {
@@ -578,10 +580,11 @@ main .skills {
 }
 
 main .skills .skill {
+  margin-top: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 12.5rem;
+  gap: 6.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
